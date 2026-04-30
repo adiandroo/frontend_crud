@@ -1,34 +1,98 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tabel Data Barang - SaaS Dashboard
 
-## Getting Started
+Portfolio project revamp of **Tabel Data Barang** into a premium admin-style dashboard with Stripe-inspired visual quality.
 
-First, run the development server:
+The focus is not only CRUD functionality, but also frontend architecture, UX quality, and polished interface behavior.
+
+## Product Direction
+
+- **Structure:** Admin SaaS layout (sidebar + topbar + content)
+- **Visual style:** Clean, premium, minimal, soft shadows, generous spacing
+- **Core module:** Data table with sorting, search, filter, loading and empty states
+- **Portfolio goal:** Look and feel like a production-ready product
+
+## Tech Stack
+
+- Next.js 13
+- React 18
+- CSS Modules
+- Tailwind (base setup available, but UI styling is modular CSS-based)
+
+## Design System
+
+Global design tokens are defined in `styles/globals.css`.
+
+- **Color system**
+  - Neutral text scale: `--text-900` to `--text-500`
+  - Surface: `--surface-muted`
+  - Primary accent: `--accent-500/600/700`
+- **Typography**
+  - `Inter` system stack
+  - Clear hierarchy for labels, body, heading
+- **Elevation**
+  - Soft card shadow with `--shadow-soft`
+- **Motion**
+  - Smooth transitions around 180ms for interactive elements
+
+## Project Structure
+
+```text
+components/
+  layout/
+    DashboardLayout.js
+    DashboardLayout.module.css
+  items/
+    ItemsDashboard.js
+    ItemsDashboard.module.css
+pages/
+  index.js
+styles/
+  globals.css
+public/
+  items.json
+```
+
+## Main Features
+
+- Admin shell layout with:
+  - Sidebar navigation
+  - Topbar search
+  - Profile area
+- Items dashboard:
+  - Search by item name
+  - Filter by stock status (all / healthy / low / out)
+  - Sortable columns (harga beli, harga jual, stok)
+  - Hover-highlight table rows
+  - Horizontal overflow support for smaller screens
+- UX states:
+  - Loading skeleton
+  - Empty state
+  - Clear CTA button (`Add Item`)
+
+## Run Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- `npm run dev` - start development server
+- `npm run build` - build for production
+- `npm run start` - start production server
+- `npm run lint` - run ESLint
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Notes
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Data source is currently local from `public/items.json`
+- CTA buttons (`Add Item`) are prepared in the UI and can be connected to modal/form flow as the next enhancement
