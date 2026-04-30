@@ -1,9 +1,10 @@
-import Items from '../components/Items';
+import DashboardOverview from '../components/dashboard/DashboardOverview';
+import DashboardLayout from '../components/layout/DashboardLayout';
 
 export default function Home() {
   return (
-    <div>
-      <Items />
-    </div>
+    <DashboardLayout activeNav="Dashboard">
+      <DashboardOverview />
+    </DashboardLayout>
   );
 }

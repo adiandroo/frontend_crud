@@ -1,0 +1,165 @@
+.page {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  padding: 22px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  color: var(--accent-600);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 8px 0 0;
+  font-size: 30px;
+  color: var(--text-900);
+}
+
+.description {
+  margin: 10px 0 0;
+  max-width: 65ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-500);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text-900);
+}
+
+.sectionSub {
+  margin: 4px 0 0;
+  color: var(--text-500);
+  font-size: 13px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-600);
+}
+
+.field input,
+.field select {
+  border: 1px solid rgba(62, 84, 147, 0.16);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text-800);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 0;
+  border-color: var(--accent-500);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(62, 84, 147, 0.08);
+}
+
+.toggleLabel {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-700);
+}
+
+.toggleSub {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--text-500);
+}
+
+.toggle {
+  width: 44px;
+  height: 26px;
+  border-radius: 999px;
+  border: 0;
+  background: #d8deef;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 180ms ease;
+}
+
+.toggleKnob {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #ffffff;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 180ms ease;
+}
+
+.toggleOn {
+  background: var(--accent-500);
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(18px);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.saveButton {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--accent-500);
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: var(--accent-600);
+}
+
+.saveMessage {
+  margin: 0;
+  color: #0f7a53;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,29 @@
+.wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 12px;
+  color: var(--accent-600);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 8px 0 0;
+  font-size: 30px;
+  color: var(--text-900);
+}
+
+.description {
+  margin: 10px 0 0;
+  max-width: 65ch;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-500);
+}
